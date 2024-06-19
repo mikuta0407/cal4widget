@@ -1,0 +1,46 @@
+/* styles.css */
+/* グリッドレイアウト */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* カレンダーのテーブル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+h2 {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    padding: 0rem;
+    border: 1px solid #ccc;
+}
+
+/* 日曜日のスタイル */
+td.sunday {
+    color: red;
+}
+
+td.saturday {
+    color: blue
+}
+
+td.holiday {
+    color: red
+}
+
+/* 今日の日付のハイライト */
+td.today {
+    background-color: yellow;
+}
+
+body{
+	font-family: sans-serif ;
+}
