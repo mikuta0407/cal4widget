@@ -12,9 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function generateCalendar(containerId, month, year) {
+    
+    // 年跨ぎハンドリング
+    if (month > 11){
+        month = month - 12;
+        year = year + 1;
+    }
     const container = document.getElementById(containerId);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const firstDay = new Date(year, month, 1).getDay();
+
 
     // Holidays JP API から祝日の日付を取得
     const holidays = await fetchHolidays(year);
